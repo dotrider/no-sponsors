@@ -1,6 +1,6 @@
 import React from "react";
-import Login from '../Login/Login';
-import Register from '../Register/Register';
+import Login from "../Login/Login";
+import Register from "../Register/Register";
 import {
   MDBNavbar,
   MDBNavbarBrand,
@@ -8,38 +8,44 @@ import {
   MDBNavItem,
   MDBNavLink,
   MDBNavbarToggler,
-  MDBCollapse
+  MDBCollapse,
 } from "mdbreact";
+
+const siteName = "#NoSponsors";
+const nav = ["merch", "cart"];
 
 const NavBar = () => {
   return (
     <MDBNavbar color="default-color" dark expand="md">
-      <MDBNavbarBrand>
-        <strong className="white-text">#NoSponsors</strong>
-      </MDBNavbarBrand>
-      <MDBNavbarToggler 
-    //   onClick={} 
+      <MDBNavLink to="/">
+        <MDBNavbarBrand>
+          <strong className="white-text">{siteName}</strong>
+        </MDBNavbarBrand>
+      </MDBNavLink>
+      <MDBNavbarToggler
+      //   onClick={}
       />
-      <MDBCollapse id="navbarCollapse3" 
-    //   isOpen={} 
-      navbar>
+      <MDBCollapse
+        id="navbarCollapse3"
+        //   isOpen={}
+        navbar
+      >
         <MDBNavbarNav left>
-          <MDBNavItem active>
-            <MDBNavLink to="#!">Merch</MDBNavLink>
-          </MDBNavItem>
-          <MDBNavItem>
-            <MDBNavLink to="#!">Cart</MDBNavLink>
-          </MDBNavItem>
+          {nav.map((page, i) => (
+            <MDBNavItem key={i}>
+              <MDBNavLink to={"/" + page}>{page.toUpperCase()}</MDBNavLink>
+            </MDBNavItem>
+          ))}
         </MDBNavbarNav>
         <MDBNavbarNav right>
           <MDBNavItem>
             <MDBNavLink className="waves-effect waves-light" to="#!">
-              <Login/>
+              <Login />
             </MDBNavLink>
           </MDBNavItem>
           <MDBNavItem>
             <MDBNavLink className="waves-effect waves-light" to="#!">
-              <Register/>
+              <Register />
             </MDBNavLink>
           </MDBNavItem>
         </MDBNavbarNav>
