@@ -33,7 +33,7 @@ const NavBar = () => {
         <MDBNavbarNav left>
           {nav.map((page, i) => (
             <MDBNavItem key={i}>
-              <MDBNavLink to={"/" + page}>{page.toUpperCase()}</MDBNavLink>
+              <MDBNavLink to={"/" + page} className="text-uppercase">{page}</MDBNavLink>
             </MDBNavItem>
           ))}
         </MDBNavbarNav>
