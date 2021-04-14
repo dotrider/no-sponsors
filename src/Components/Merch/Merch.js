@@ -9,7 +9,7 @@ import {
   MDBCardTitle,
   MDBCardText,
   MDBCardFooter,
-  MDBTooltip,
+  MDBTooltip
 } from "mdbreact";
 
 const page = "Merch";
@@ -29,7 +29,7 @@ const Merch = () => {
       <MDBRow>
         {products.map(
           ({ id, product, category, description, img, price }, i) => (
-            <MDBCol lg="4" md="12" className="mb-lg-0 mb-4 mt-4" key={id}>
+            <MDBCol lg="4" sm="6" className="mb-lg-0 mb-4 mt-4" key={id}>
               <MDBCard wide ecommerce>
                 <MDBCardImage cascade src={img} top alt="sample photo" />
                 <MDBCardBody cascade className="text-center">
@@ -50,7 +50,7 @@ const Merch = () => {
                       <MDBTooltip domElement placement="top">
                         <i className="grey-text fa fa-eye mr-3" />
                         <span>Quick Look</span>
-                      </MDBTooltip>{" "}
+                      </MDBTooltip>
                     </span>
                   </MDBCardFooter>
                 </MDBCardBody>

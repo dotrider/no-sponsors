@@ -12,7 +12,7 @@ const products = [
     price: 20.0,
   },
   {
-    id: 0,
+    id: 1,
     product: "GoPro",
     category: "Camera",
     description:
@@ -22,7 +22,7 @@ const products = [
     price: 20.0,
   },
   {
-    id: 0,
+    id: 2,
     product: "GoPro",
     category: "Camera",
     description:
@@ -32,7 +32,7 @@ const products = [
     price: 20.0,
   },
   {
-    id: 0,
+    id: 3,
     product: "GoPro",
     category: "Camera",
     description:
