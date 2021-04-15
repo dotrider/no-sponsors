@@ -1,24 +1,14 @@
 import React from "react";
 import data from "../../api/data";
-import { 
-    MDBRow, 
-    MDBCol, 
-    MDBCard, 
-    MDBCardBody, 
-    MDBIcon 
-} from "mdbreact";
+import { MDBRow, MDBCol, MDBCard, MDBCardBody, MDBIcon } from "mdbreact";
 
 const Categories = () => {
   return (
-    <MDBCard className="my-5 px-5 pb-5">
-      <MDBCardBody>
-        {data.map(
-          (
-            { id, category, description, post, topics, color, icon },
-            i,
-            arr
-          ) => (
-            <>
+    <>
+      {data.map(
+        ({ id, category, description, post, topics, color, icon }, i, arr) => (
+          <MDBCard className="my-5 px-3">
+            <MDBCardBody>
               <MDBRow key={id}>
                 <MDBCol lg="2" xl="2">
                   <MDBIcon icon={icon} size="5x" />
@@ -48,12 +38,11 @@ const Categories = () => {
                   <span className="font-weight-bold pl-3">{topics}</span>
                 </MDBCol>
               </MDBRow>
-              {arr.length - 1 !== i && <hr className="my-5" />}
-            </>
-          )
-        )}
-      </MDBCardBody>
-    </MDBCard>
+            </MDBCardBody>
+          </MDBCard>
+        )
+      )}
+    </>
   );
 };
 

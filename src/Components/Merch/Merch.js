@@ -19,7 +19,7 @@ voluptas nostrum quisquam eum porro a pariatur veniam.`;
 
 const Merch = () => {
   return (
-    <section className="text-center m-5">
+    <section className="text-center">
       <h2 className="h1-responsive font-weight-bold text-center text-uppercase my-5">
         {page}
       </h2>
