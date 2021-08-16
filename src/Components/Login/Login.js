@@ -9,6 +9,8 @@ import {
 
 const Login = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleToggle = () => setIsOpen(!isOpen);
 
@@ -30,6 +32,8 @@ const Login = () => {
                 type="email"
                 id="defaultFormLoginEmailEx"
                 className="form-control"
+                value={email}
+                onChange={e => setEmail(e.target.value)}
               />
               <br />
               <label htmlFor="defaultFormLoginPasswordEx" className="grey-text">
@@ -39,6 +43,8 @@ const Login = () => {
                 type="password"
                 id="defaultFormLoginPasswordEx"
                 className="form-control"
+                value={password}
+                onChange={e => setPassword(e.target.value)}
               />
               <div className="text-center mt-4">
                 <MDBBtn color="indigo" type="submit">
